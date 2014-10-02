@@ -58,14 +58,14 @@ public class MainActivity extends FragmentActivity {
 			// view.setBackgroundColor(Color.argb(255, position * 50,
 			// position * 10, position * 50));
 			Log.d("T_instantiateItem", "Item " + position);
-			final View view = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE))
-					.inflate(R.layout.sample_frag, container, false);
+			final View view = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(
+					R.layout.sample_frag, container, false);
 			TextView tv = (TextView) view.findViewById(R.id.tv1);
 			tv.setText("Page: " + position);
 
 			ImageView ivTop = (ImageView) view.findViewById(R.id.iv_top);
 			final ViewGroup container2 = container;
-			 final int pos = position;
+			final int pos = position;
 			ivTop.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
@@ -78,8 +78,7 @@ public class MainActivity extends FragmentActivity {
 			});
 			container.addView(view);
 			viewList.add(view);
-			Log.d("T_instantiateItem", "Item " + position
-					+ ", viewList.size()=" + viewList.size());
+			Log.d("T_instantiateItem", "Item " + position + ", viewList.size()=" + viewList.size());
 			return view;
 		}
 
